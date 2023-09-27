@@ -28,6 +28,26 @@ class Solution(object):
             return -1
             
 
+    ## Mac Optimized Version Beats 98% LeetCode
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        l,r = -1,len(nums)
+
+        while l+1 < r:
+            mid = (l+r)//2
+            print(mid)
+            if nums[mid] <= target:
+                l = mid
+            else:
+                r = mid
+        if nums[l] == target:
+            return l
+        return r
+
 
 
 numbers = [5]
