@@ -15,11 +15,12 @@ class Solution(object):
 
             i-=1
         
-        digits.insert(0,1)
+        #digits.insert(0,1)
+        digits=[1]+digits
         return digits
         
 
-testArray = [9,9,7,9,9]
+testArray = [9,9,9,9,9]
 print(testArray)
 instance = Solution()    
 result = instance.plusOne(testArray)
